@@ -1,5 +1,5 @@
 const Rockets = () => {
-    return null
-}
+  return null;
+};
 
 export default Rockets;
