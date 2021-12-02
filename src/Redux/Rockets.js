@@ -83,4 +83,3 @@ export const cancelReservationAction = (rocketId) => (dispatch) => {
     dispatch({ type: ERROR_ROCKETS, payload: error.message });
   }
 };
-
