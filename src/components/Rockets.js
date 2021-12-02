@@ -4,7 +4,7 @@ import {
   cancelReservationAction,
   getRocketsAction,
   setReserveAction,
-} from "../Redux/rocketActions";
+} from "../Redux/Rockets";
 
 const Rockets = () => {
   const { rockets } = useSelector((state) => state.rockets);

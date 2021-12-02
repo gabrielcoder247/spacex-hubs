@@ -1,11 +1,22 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable import/extensions */
-import {
-  GET_ROCKETS,
-  SET_ROCKETS,
-  SET_RESERVES,
-  CANCEL_RESERVES,
-} from "../types";
+import axios from "axios";
+
+const GET_ROCKETS = "space-travelers-hub/rockets/GET_ROCKETS";
+const SET_ROCKETS = "space-travelers-hub/rockets/SET_ROCKETS";
+const ERROR_ROCKETS = "space-travelers-hub/rockets/ERROR_ROCKETS";
+const CANCEL_RESERVES = "space-travelers-hub/rockets/CANCEL_RESERVES";
+const SET_RESERVES = "space-travelers-hub/rockets/SET_RESERVES";
+
+const LOAD_DRAGONS = "LOAD_DRAGONS";
+const RESERVE_DRAGONS = "RESERVE_DRAGONS";
+const CANCEL_RESERVATION = "CANCEL_RESERVATION";
+const LOAD_FAILED = "LOAD_FAILED";
+const url = "https://api.spacexdata.com/v3/dragons";
+
+const JOIN_MISSION = "space/missions/JOINMISSION";
+const LOAD_MISSIONS = "space/missions/LOADMISSIONS";
+const LEAVE_MISSION = "spacex-hub/missions/LEAVE_MISSION";
 
 const initialState = { rockets: null };
 export default function rocketsReducer(state = initialState, action) {
@@ -35,3 +46,40 @@ export default function rocketsReducer(state = initialState, action) {
       return state;
   }
 }
+
+export const getRocketsAction = () => async (dispatch) => {
+  const baseUrl = "https://api.spacexdata.com/v3/rockets";
+  try {
+    dispatch({ type: GET_ROCKETS });
+    const newRocketList = [];
+    const { data } = await axios.get(`${baseUrl}`);
+    data.map((item) => {
+      const rocketObj = {
+        id: item.id,
+        rocket_name: item.rocket_name,
+        description: item.description,
+        flickr_images: item.flickr_images[0],
+      };
+      return newRocketList.push(rocketObj);
+    });
+    dispatch({ type: SET_ROCKETS, payload: newRocketList });
+  } catch (error) {
+    dispatch({ type: ERROR_ROCKETS, payload: error.message });
+  }
+};
+
+export const setReserveAction = (rocketId) => (dispatch) => {
+  try {
+    dispatch({ type: SET_RESERVES, payload: rocketId });
+  } catch (error) {
+    dispatch({ type: ERROR_ROCKETS, payload: error.message });
+  }
+};
+
+export const cancelReservationAction = (rocketId) => (dispatch) => {
+  try {
+    dispatch({ type: CANCEL_RESERVES, payload: rocketId });
+  } catch (error) {
+    dispatch({ type: ERROR_ROCKETS, payload: error.message });
+  }
+};
