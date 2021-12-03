@@ -14,7 +14,7 @@ const Rockets = () => {
     if (!rockets) {
       dispatch(getRocketsAction());
     }
-  }, []);
+  });
 
   const setReserve = (id) => {
     dispatch(setReserveAction(id));
@@ -26,21 +26,24 @@ const Rockets = () => {
 
   return (
     <section className="inner-padding">
+      {" "}
       {rockets &&
         rockets.map((rocket) => (
           <div className="rocket" key={rocket.id}>
             <div className="rocket-img">
               <img className="pl-6" src={rocket.flickr_images} alt="rocket" />
-            </div>
+            </div>{" "}
             <div className="rocket-info pr-3">
-              <h1>{rocket.rocket_name}</h1>
+              <h1> {rocket.rocket_name} </h1>{" "}
               <p>
+                {" "}
                 {rocket.reserved && (
-                  <span className="reserve-badge">Reserved</span>
-                )}
-                {rocket.description}
-              </p>
+                  <span className="reserve-badge"> Reserved </span>
+                )}{" "}
+                {rocket.description}{" "}
+              </p>{" "}
               <div className="button-div">
+                {" "}
                 {!rocket.reserved ? (
                   <button
                     className="reserve-btn"
@@ -48,7 +51,7 @@ const Rockets = () => {
                     type="button"
                   >
                     {" "}
-                    Reserve
+                    Reserve{" "}
                   </button>
                 ) : (
                   <button
@@ -56,13 +59,13 @@ const Rockets = () => {
                     onClick={() => cancelReserve(rocket.id)}
                     type="button"
                   >
-                    {!rocket.reserved ? "Reserve" : "Cancel Reserve"}
+                    {!rocket.reserved ? "Reserve" : "Cancel Reserve"}{" "}
                   </button>
-                )}
-              </div>
-            </div>
+                )}{" "}
+              </div>{" "}
+            </div>{" "}
           </div>
-        ))}
+        ))}{" "}
     </section>
   );
 };

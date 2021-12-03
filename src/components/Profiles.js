@@ -13,12 +13,12 @@ const Profile = () => {
     if (!rockets) {
       dispatch(getRocketsAction());
     }
-  }, []);
+  });
   useEffect(() => {
     if (!missions) {
       dispatch(fetchAllMissions());
     }
-  }, []);
+  });
   return (
     <div className="grid grid-cols-2 w-full mx-auto">
       <section>

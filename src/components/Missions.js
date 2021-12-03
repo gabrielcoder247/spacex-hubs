@@ -15,7 +15,7 @@ const Missions = () => {
   };
   useEffect(() => {
     getMissionsData();
-  }, []);
+  });
   return (
     <div>
       <Table striped bordered hover size="sm" className="table">
