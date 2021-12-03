@@ -31,10 +31,6 @@ npm run lint
 👤 **Gabriel Nwachukwu**
 [<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/gabrielcoder247)
 [<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/gabriel-nwachukwu/)
- <a href="mailto:gabrielcoder247@gmail.com?subject=Hey Gabriel?"><img height="26" src="https://cdn.worldvectorlogo.com/logos/official-gmail-icon-2020-.svg"></a>
- 👤 **Gabriel Nwachukwu**
-[<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/gabrielcoder247)
-[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/1200px-Linkedin.svg.png"></code>](https://www.linkedin.com/in/gabriel-nwachukwu/)
 
  👤 **Claude Mucyo Ntacyonungutse**
 [<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/Mucyosoda)
@@ -43,7 +39,7 @@ npm run lint
 
 ## 🤝 Contributing
 Contributions, issues and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/nikoescobal/space-travelers/issues).
+Feel free to check the [issues page](https://github.com/gabrielcoder247/spacex-hubs/issues).
 ## Show your support
 Give a ⭐️ if you like this project!
 ## Acknowledgments
