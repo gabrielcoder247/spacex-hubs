@@ -14,8 +14,8 @@
 ## Screenshot
 [Click here to see a screenshot](<img width="1440" alt="Screen Shot 2021-11-27 at 6 43 52 AM" src="https://user-images.githubusercontent.com/62937819/143659785-7746b52e-3a7b-495b-a550-16aeead6648c.png">
 )
-<!-- ## Live Demo -->
-<!-- [Click here to see the project](https://spacexapi-demo.netlify.app/) -->
+## Live Demo
+[Click here to see the project](https://suspicious-volhard-d85abd.netlify.app/)
 ## Getting Started
 **To get a local copy up and running follow these simple example steps.**
 ## Setup
