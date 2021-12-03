@@ -9,8 +9,6 @@ const reducers = combineReducers({
   rockets: rocketsReducer,
 });
 
-const middlwares = [logger];
-
 const configureStore = createStore(reducers, applyMiddleware(logger, thunk));
 
 export default configureStore;
