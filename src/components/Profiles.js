@@ -1,9 +1,11 @@
 /* eslint-disable max-len */
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getRocketsAction } from "../store/reducers/actions/rocketActions";
-import { fetchData } from "../store/reducers/actions/dragonActions";
-import { fetchAllMissions } from "../store/reducers/actions/missionActions";
+import {
+  getRocketsAction,
+  fetchData,
+  fetchAllMissions,
+} from "../Redux/Rockets";
 
 const Profile = () => {
   const dispatch = useDispatch();
