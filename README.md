@@ -20,7 +20,7 @@
 **To get a local copy up and running follow these simple example steps.**
 ## Setup
 - Clone this repository.
-- Run ``npm i`` or ``yarn`` to install dependencies required to start the project.
+- Run ``npm i`` or ``yarn`` to install dependencies required to start the project
 - Make sure to use node v15.11.0 (npm v7.6.0)
 - Run ``npm start``
 ## Run Tests
